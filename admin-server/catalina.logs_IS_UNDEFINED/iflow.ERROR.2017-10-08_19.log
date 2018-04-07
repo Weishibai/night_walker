@@ -1,0 +1,3 @@
+2017-10-08 19:26:22,261 ERROR [main] o.h.u.JDBCExceptionReporter:234 An attempt by a client to checkout a Connection has timed out.
+2017-10-08 19:26:39,279 ERROR [64989209@qtp-937366737-0] o.h.u.JDBCExceptionReporter:234 Column 'expense' cannot be null
+2017-10-08 19:59:36,525 ERROR [main] o.h.u.JDBCExceptionReporter:234 An attempt by a client to checkout a Connection has timed out.

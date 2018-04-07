@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:cache="http://www.springframework.org/schema/cache"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/cache
+        http://www.springframework.org/schema/cache/spring-cache-3.2.xsd
+        http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+  <context:annotation-config />
+  <!--<cache:annotation-driven/>-->
+
+  <context:property-placeholder location="classpath:invoke.properties, classpath:redis-config.properties" ignore-unresolvable="true"/>
+
+  <!-- 自动搜索非@Controller标注的类，和非拦截器 -->
+  <context:component-scan base-package="com.sunshine.publicserver">
+    <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+  </context:component-scan>
+
+  <import resource="mvc-context.xml" />
+
+  <import resource="redis-context.xml" />
+  <!--<import resource="shunt.xml" />-->
+
+  <!--  <import resource="datasource-context.xml" />   -->
+
+  <!--<task:annotation-driven executor="asyncExecutor" />-->
+  <!--<task:executor id="asyncExecutor" pool-size="100-100" queue-capacity="10" />-->
+
+</beans>

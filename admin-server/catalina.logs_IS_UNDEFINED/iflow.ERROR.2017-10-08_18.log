@@ -1,0 +1,2 @@
+2017-10-08 18:33:36,856 ERROR [main] o.h.u.JDBCExceptionReporter:234 An attempt by a client to checkout a Connection has timed out.
+2017-10-08 18:49:06,848 ERROR [main] o.h.u.JDBCExceptionReporter:234 An attempt by a client to checkout a Connection has timed out.

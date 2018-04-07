@@ -1,0 +1,1 @@
+2017-10-02 18:34:12,228 WARN  [1273675500@qtp-1152488702-0] o.s.w.s.PageNotFound:1116 No mapping found for HTTP request with URI [/admin-server/quota/show] in DispatcherServlet with name 'restapi'

@@ -1,0 +1,5 @@
+2017-10-02 14:43:20,560 WARN  [2061316668@qtp-6688524-0] o.s.w.s.PageNotFound:1116 No mapping found for HTTP request with URI [/public-server/fliggy/search] in DispatcherServlet with name 'restapi'
+2017-10-02 14:45:44,481 WARN  [2061316668@qtp-6688524-0] o.s.w.s.PageNotFound:1116 No mapping found for HTTP request with URI [/public-server/fliggy/search] in DispatcherServlet with name 'restapi'
+2017-10-02 14:46:26,079 WARN  [2061316668@qtp-6688524-0] o.s.w.s.PageNotFound:1116 No mapping found for HTTP request with URI [/public-server/fliggy/search] in DispatcherServlet with name 'restapi'
+2017-10-02 14:47:08,974 WARN  [2061316668@qtp-6688524-0] o.s.w.s.PageNotFound:1116 No mapping found for HTTP request with URI [/public-server/fliggy/search] in DispatcherServlet with name 'restapi'
+2017-10-02 14:49:08,733 WARN  [2061316668@qtp-6688524-0] o.s.w.s.PageNotFound:194 Request method 'POST' not supported

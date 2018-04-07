@@ -1,0 +1,449 @@
+2017-10-08 18:33:29,763 INFO  [main] o.s.w.c.ContextLoader:285 Root WebApplicationContext: initialization started
+2017-10-08 18:33:29,816 INFO  [main] o.s.w.c.s.XmlWebApplicationContext:512 Refreshing Root WebApplicationContext: startup date [Sun Oct 08 18:33:29 CST 2017]; root of context hierarchy
+2017-10-08 18:33:29,858 INFO  [main] o.s.b.f.x.XmlBeanDefinitionReader:316 Loading XML bean definitions from class path resource [spring/root-context.xml]
+2017-10-08 18:33:30,133 INFO  [main] o.s.b.f.x.XmlBeanDefinitionReader:316 Loading XML bean definitions from class path resource [spring/mvc-context.xml]
+2017-10-08 18:33:30,371 INFO  [main] o.s.b.f.x.XmlBeanDefinitionReader:316 Loading XML bean definitions from class path resource [spring/shunt.xml]
+2017-10-08 18:33:30,424 INFO  [main] o.s.b.f.x.XmlBeanDefinitionReader:316 Loading XML bean definitions from class path resource [spring/datasource-context.xml]
+2017-10-08 18:33:30,876 INFO  [main] o.s.b.f.c.PropertyPlaceholderConfigurer:172 Loading properties file from class path resource [jdbc.properties]
+2017-10-08 18:33:30,884 INFO  [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor:141 JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-10-08 18:33:30,993 INFO  [main] o.s.b.f.s.DefaultListableBeanFactory:603 Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3e33b52e: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,captchaController,policyAdminController,org.springframework.web.servlet.handler.MappedInterceptor#1,org.springframework.web.servlet.view.InternalResourceViewResolver#0,rest,org.springframework.web.servlet.handler.SimpleMappingExceptionResolver#0,conversionService,policyServiceImpl,userServiceImpl,dataSource,sessionFactory,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionManager,pricePolicyDaoImpl,quotaPolicyDaoImpl,whitelistPolicyDaoImpl,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2017-10-08 18:33:31,178 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/captcha/verify],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.CaptchaController.verify(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-10-08 18:33:31,178 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/captcha/show],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.sunshine.admin.controller.CaptchaController.showCaptcha(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-08 18:33:31,184 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/price/saveOrUpdate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.saveOrUpdatePrice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.sunshine.common.vo.PricePolicy)
+2017-10-08 18:33:31,184 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/whitelist/saveOrUpdate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.saveOrUpdateWhitelist(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.sunshine.common.vo.WhitelistPolicy)
+2017-10-08 18:33:31,185 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/quota/saveOrUpdate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.saveOrUpdateQuota(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.sunshine.common.vo.QuotaPolicy)
+2017-10-08 18:33:31,185 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/price/query],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.queryPrice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.sunshine.common.vo.TripType,com.sunshine.common.vo.GDS,com.sunshine.common.vo.Platform,java.lang.String,java.lang.Long,java.lang.String,java.lang.String)
+2017-10-08 18:33:31,187 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/price/del],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.delPrice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,long)
+2017-10-08 18:33:31,188 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/whitelist/query],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.queryWhitelist(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.sunshine.common.vo.GDS,java.lang.String,java.lang.Long,java.lang.String,java.lang.String)
+2017-10-08 18:33:31,188 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/whitelist/del],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.delWhitelist(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,long)
+2017-10-08 18:33:31,189 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/quota/query],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.queryQuota(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.Integer,com.sunshine.common.vo.GDS,java.lang.Long,java.lang.String)
+2017-10-08 18:33:31,189 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/quota/del],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.delQuota(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,long)
+2017-10-08 18:33:31,865 INFO  [main] c.m.v.l.MLog:92 MLog clients using log4j logging.
+2017-10-08 18:33:32,014 INFO  [main] c.m.v.c.C3P0Registry:216 Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+2017-10-08 18:33:36,203 INFO  [main] o.h.a.c.Version:37 Hibernate Commons Annotations 3.2.0.Final
+2017-10-08 18:33:36,210 INFO  [main] o.h.c.Environment:603 Hibernate 3.6.10.Final
+2017-10-08 18:33:36,213 INFO  [main] o.h.c.Environment:636 hibernate.properties not found
+2017-10-08 18:33:36,217 INFO  [main] o.h.c.Environment:814 Bytecode provider name : javassist
+2017-10-08 18:33:36,296 INFO  [main] o.h.c.Environment:695 using JDK 1.4 java.sql.Timestamp handling
+2017-10-08 18:33:36,413 INFO  [main] o.h.c.AnnotationBinder:532 Binding entity from annotated class: com.sunshine.dal.entity.QuotaPolicyEntity
+2017-10-08 18:33:36,445 INFO  [main] o.h.c.a.EntityBinder:530 Bind entity com.sunshine.dal.entity.QuotaPolicyEntity on table tb_quota_policy
+2017-10-08 18:33:36,496 INFO  [main] o.h.c.AnnotationBinder:532 Binding entity from annotated class: com.sunshine.dal.entity.PricePolicyEntity
+2017-10-08 18:33:36,500 INFO  [main] o.h.c.a.EntityBinder:530 Bind entity com.sunshine.dal.entity.PricePolicyEntity on table tb_price_policy
+2017-10-08 18:33:36,546 INFO  [main] o.h.c.Configuration:1676 Hibernate Validator not found: ignoring
+2017-10-08 18:33:36,548 INFO  [main] o.s.o.h.a.AnnotationSessionFactoryBean:780 Building new Hibernate SessionFactory
+2017-10-08 18:33:36,559 INFO  [main] o.h.c.s.HibernateSearchEventListenerRegister:75 Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-10-08 18:33:36,563 INFO  [main] o.h.c.ConnectionProviderFactory:173 Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-10-08 18:33:36,610 INFO  [main] c.m.v.c.i.AbstractPoolBackedDataSource:522 Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 200, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0yu9q1xsms5n157lo25|2eb0cefe, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0yu9q1xsms5n157lo25|2eb0cefe, idleConnectionTestPeriod -> 600, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sunshine?useUnicode=true&characterEncoding=utf-8&autoReconnect=true, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1200, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 64, maxStatements -> 128, maxStatementsPerConnection -> 0, minPoolSize -> 8, numHelperThreads -> 3, preferredTestQuery -> select 1, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2017-10-08 18:33:36,855 WARN  [main] o.h.u.JDBCExceptionReporter:233 SQL Error: 0, SQLState: null
+2017-10-08 18:33:36,856 ERROR [main] o.h.u.JDBCExceptionReporter:234 An attempt by a client to checkout a Connection has timed out.
+2017-10-08 18:33:36,856 WARN  [main] o.h.c.SettingsFactory:147 Could not obtain connection to query metadata
+java.sql.SQLException: An attempt by a client to checkout a Connection has timed out.
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:118)
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:77)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:687)
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getConnection(AbstractPoolBackedDataSource.java:140)
+	at org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider.getConnection(LocalDataSourceConnectionProvider.java:83)
+	at org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:113)
+	at org.hibernate.cfg.Configuration.buildSettingsInternal(Configuration.java:2863)
+	at org.hibernate.cfg.Configuration.buildSettings(Configuration.java:2859)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1870)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:863)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:782)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:188)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1511)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:575)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:503)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:503)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:636)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:934)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:410)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:548)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:517)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:467)
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStart(Jetty6PluginWebAppContext.java:115)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:156)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.plugin.Jetty6PluginServer.start(Jetty6PluginServer.java:132)
+	at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:441)
+	at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:383)
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo.execute(AbstractJettyRunMojo.java:210)
+	at org.mortbay.jetty.plugin.Jetty6RunMojo.execute(Jetty6RunMojo.java:184)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:106)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:318)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:153)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:555)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:214)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:414)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:357)
+Caused by: com.mchange.v2.resourcepool.TimeoutException: A client timed out while waiting to acquire a resource from com.mchange.v2.resourcepool.BasicResourcePool@3d4ecc67 -- timeout at awaitAvailable()
+	at com.mchange.v2.resourcepool.BasicResourcePool.awaitAvailable(BasicResourcePool.java:1416)
+	at com.mchange.v2.resourcepool.BasicResourcePool.prelimCheckoutResource(BasicResourcePool.java:606)
+	at com.mchange.v2.resourcepool.BasicResourcePool.checkoutResource(BasicResourcePool.java:526)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutAndMarkConnectionInUse(C3P0PooledConnectionPool.java:755)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:682)
+	... 103 common frames omitted
+2017-10-08 18:33:36,942 INFO  [main] o.h.d.Dialect:136 Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-08 18:33:36,951 INFO  [main] o.h.e.j.JdbcSupportLoader:70 Disabling contextual LOB creation as connection was null
+2017-10-08 18:33:36,960 INFO  [main] o.h.t.TransactionFactoryFactory:65 Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-10-08 18:33:36,962 INFO  [main] o.h.t.TransactionManagerLookupFactory:83 No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-10-08 18:33:36,962 INFO  [main] o.h.c.SettingsFactory:179 Automatic flush during beforeCompletion(): disabled
+2017-10-08 18:33:36,962 INFO  [main] o.h.c.SettingsFactory:183 Automatic session close at end of transaction: disabled
+2017-10-08 18:33:36,963 INFO  [main] o.h.c.SettingsFactory:198 Scrollable result sets: disabled
+2017-10-08 18:33:36,964 INFO  [main] o.h.c.SettingsFactory:206 JDBC3 getGeneratedKeys(): disabled
+2017-10-08 18:33:36,964 INFO  [main] o.h.c.SettingsFactory:214 Connection release mode: auto
+2017-10-08 18:33:36,965 INFO  [main] o.h.c.SettingsFactory:238 Maximum outer join fetch depth: 2
+2017-10-08 18:33:36,967 INFO  [main] o.h.c.SettingsFactory:241 Default batch fetch size: 1
+2017-10-08 18:33:36,968 INFO  [main] o.h.c.SettingsFactory:245 Generate SQL with comments: disabled
+2017-10-08 18:33:36,968 INFO  [main] o.h.c.SettingsFactory:249 Order SQL updates by primary key: disabled
+2017-10-08 18:33:36,969 INFO  [main] o.h.c.SettingsFactory:253 Order SQL inserts for batching: disabled
+2017-10-08 18:33:36,969 INFO  [main] o.h.c.SettingsFactory:431 Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-10-08 18:33:36,972 INFO  [main] o.h.h.a.ASTQueryTranslatorFactory:47 Using ASTQueryTranslatorFactory
+2017-10-08 18:33:36,973 INFO  [main] o.h.c.SettingsFactory:261 Query language substitutions: {}
+2017-10-08 18:33:36,973 INFO  [main] o.h.c.SettingsFactory:266 JPA-QL strict compliance: disabled
+2017-10-08 18:33:36,974 INFO  [main] o.h.c.SettingsFactory:271 Second-level cache: enabled
+2017-10-08 18:33:36,974 INFO  [main] o.h.c.SettingsFactory:275 Query cache: disabled
+2017-10-08 18:33:36,974 INFO  [main] o.h.c.SettingsFactory:406 Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-10-08 18:33:36,977 INFO  [main] o.h.c.SettingsFactory:285 Optimize cache for minimal puts: disabled
+2017-10-08 18:33:36,977 INFO  [main] o.h.c.SettingsFactory:294 Structured second-level cache entries: disabled
+2017-10-08 18:33:36,980 INFO  [main] o.h.c.SettingsFactory:314 Echoing all SQL to stdout
+2017-10-08 18:33:36,982 INFO  [main] o.h.c.SettingsFactory:323 Statistics: disabled
+2017-10-08 18:33:36,982 INFO  [main] o.h.c.SettingsFactory:327 Deleted entity synthetic identifier rollback: disabled
+2017-10-08 18:33:36,983 INFO  [main] o.h.c.SettingsFactory:343 Default entity-mode: pojo
+2017-10-08 18:33:36,983 INFO  [main] o.h.c.SettingsFactory:347 Named query checking : enabled
+2017-10-08 18:33:36,983 INFO  [main] o.h.c.SettingsFactory:351 Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-10-08 18:33:37,010 INFO  [main] o.h.i.SessionFactoryImpl:202 building session factory
+2017-10-08 18:33:37,084 INFO  [main] o.h.t.BasicTypeRegistry:150 Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@7ac5b4c
+2017-10-08 18:33:37,086 INFO  [main] o.h.t.BasicTypeRegistry:150 Type registration [blob] overrides previous : org.hibernate.type.BlobType@53982523
+2017-10-08 18:33:37,094 INFO  [main] o.h.t.BasicTypeRegistry:150 Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@53982523
+2017-10-08 18:33:37,096 INFO  [main] o.h.t.BasicTypeRegistry:150 Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@2b0454d2
+2017-10-08 18:33:37,096 INFO  [main] o.h.t.BasicTypeRegistry:150 Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@42d9e8d2
+2017-10-08 18:33:37,097 INFO  [main] o.h.t.BasicTypeRegistry:150 Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@798cf6d2
+2017-10-08 18:33:37,098 INFO  [main] o.h.t.BasicTypeRegistry:150 Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@35f7969d
+2017-10-08 18:33:37,099 INFO  [main] o.h.t.BasicTypeRegistry:150 Type registration [clob] overrides previous : org.hibernate.type.ClobType@49491770
+2017-10-08 18:33:37,101 INFO  [main] o.h.t.BasicTypeRegistry:150 Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@49491770
+2017-10-08 18:33:37,422 INFO  [main] o.h.i.SessionFactoryObjectFactory:105 Not binding factory to JNDI, no JNDI name configured
+2017-10-08 18:33:37,429 INFO  [main] o.h.t.h.SchemaUpdate:155 Running hbm2ddl schema update
+2017-10-08 18:33:37,429 INFO  [main] o.h.t.h.SchemaUpdate:167 fetching database metadata
+2017-10-08 18:33:37,443 INFO  [main] o.h.t.h.SchemaUpdate:179 updating schema
+2017-10-08 18:33:37,553 INFO  [main] o.h.t.h.TableMetadata:65 table found: sunshine.tb_price_policy
+2017-10-08 18:33:37,553 INFO  [main] o.h.t.h.TableMetadata:66 columns: [carrier, trip_type, agent_id, rate, from_city, gds, spaces, to_city, id, expense, platform, status]
+2017-10-08 18:33:37,554 INFO  [main] o.h.t.h.TableMetadata:68 foreign keys: []
+2017-10-08 18:33:37,554 INFO  [main] o.h.t.h.TableMetadata:69 indexes: [index_agent_id, index_agent_id_status, primary]
+2017-10-08 18:33:37,606 INFO  [main] o.h.t.h.TableMetadata:65 table found: sunshine.tb_quota_policy
+2017-10-08 18:33:37,607 INFO  [main] o.h.t.h.TableMetadata:66 columns: [agent_id, surplus, gds, target_branch, id, uplimit, pcc_status, status]
+2017-10-08 18:33:37,607 INFO  [main] o.h.t.h.TableMetadata:68 foreign keys: []
+2017-10-08 18:33:37,608 INFO  [main] o.h.t.h.TableMetadata:69 indexes: [index_agent_id, index_agent_id_status, primary]
+2017-10-08 18:33:37,610 INFO  [main] o.h.t.h.SchemaUpdate:217 schema update complete
+2017-10-08 18:33:37,814 INFO  [main] o.s.o.h.HibernateTransactionManager:416 Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 200, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0yu9q1xsms5n157lo25|2eb0cefe, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0yu9q1xsms5n157lo25|2eb0cefe, idleConnectionTestPeriod -> 600, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sunshine?useUnicode=true&characterEncoding=utf-8&autoReconnect=true, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1200, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 64, maxStatements -> 128, maxStatementsPerConnection -> 0, minPoolSize -> 8, numHelperThreads -> 3, preferredTestQuery -> select 1, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+2017-10-08 18:33:37,829 INFO  [main] o.s.w.c.ContextLoader:325 Root WebApplicationContext: initialization completed in 8063 ms
+2017-10-08 18:33:37,985 INFO  [main] o.s.w.s.DispatcherServlet:457 FrameworkServlet 'restapi': initialization started
+2017-10-08 18:33:38,000 INFO  [main] o.s.w.c.s.XmlWebApplicationContext:512 Refreshing WebApplicationContext for namespace 'restapi-servlet': startup date [Sun Oct 08 18:33:38 CST 2017]; parent: Root WebApplicationContext
+2017-10-08 18:33:38,001 INFO  [main] o.s.b.f.x.XmlBeanDefinitionReader:316 Loading XML bean definitions from class path resource [spring/mvc-context.xml]
+2017-10-08 18:33:38,172 INFO  [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor:141 JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-10-08 18:33:38,182 INFO  [main] o.s.b.f.s.DefaultListableBeanFactory:603 Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3bab95ca: defining beans [mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,captchaController,policyAdminController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.web.servlet.handler.MappedInterceptor#1,org.springframework.web.servlet.view.InternalResourceViewResolver#0,rest,org.springframework.web.servlet.handler.SimpleMappingExceptionResolver#0,conversionService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@3e33b52e
+2017-10-08 18:33:38,212 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/captcha/verify],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.CaptchaController.verify(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-10-08 18:33:38,213 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/captcha/show],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.sunshine.admin.controller.CaptchaController.showCaptcha(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-08 18:33:38,213 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/price/saveOrUpdate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.saveOrUpdatePrice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.sunshine.common.vo.PricePolicy)
+2017-10-08 18:33:38,214 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/whitelist/saveOrUpdate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.saveOrUpdateWhitelist(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.sunshine.common.vo.WhitelistPolicy)
+2017-10-08 18:33:38,214 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/quota/saveOrUpdate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.saveOrUpdateQuota(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.sunshine.common.vo.QuotaPolicy)
+2017-10-08 18:33:38,214 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/price/query],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.queryPrice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.sunshine.common.vo.TripType,com.sunshine.common.vo.GDS,com.sunshine.common.vo.Platform,java.lang.String,java.lang.Long,java.lang.String,java.lang.String)
+2017-10-08 18:33:38,214 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/price/del],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.delPrice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,long)
+2017-10-08 18:33:38,215 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/whitelist/query],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.queryWhitelist(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.sunshine.common.vo.GDS,java.lang.String,java.lang.Long,java.lang.String,java.lang.String)
+2017-10-08 18:33:38,215 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/whitelist/del],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.delWhitelist(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,long)
+2017-10-08 18:33:38,215 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/quota/query],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.queryQuota(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.Integer,com.sunshine.common.vo.GDS,java.lang.Long,java.lang.String)
+2017-10-08 18:33:38,216 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/quota/del],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.delQuota(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,long)
+2017-10-08 18:33:38,378 INFO  [main] o.s.w.s.DispatcherServlet:476 FrameworkServlet 'restapi': initialization completed in 392 ms
+2017-10-08 18:43:31,891 WARN  [1787281831@qtp-937366737-3] o.s.w.s.PageNotFound:194 Request method 'POST' not supported
+2017-10-08 18:49:04,015 INFO  [main] o.s.w.c.ContextLoader:285 Root WebApplicationContext: initialization started
+2017-10-08 18:49:04,066 INFO  [main] o.s.w.c.s.XmlWebApplicationContext:512 Refreshing Root WebApplicationContext: startup date [Sun Oct 08 18:49:04 CST 2017]; root of context hierarchy
+2017-10-08 18:49:04,095 INFO  [main] o.s.b.f.x.XmlBeanDefinitionReader:316 Loading XML bean definitions from class path resource [spring/root-context.xml]
+2017-10-08 18:49:04,296 INFO  [main] o.s.b.f.x.XmlBeanDefinitionReader:316 Loading XML bean definitions from class path resource [spring/mvc-context.xml]
+2017-10-08 18:49:04,466 INFO  [main] o.s.b.f.x.XmlBeanDefinitionReader:316 Loading XML bean definitions from class path resource [spring/shunt.xml]
+2017-10-08 18:49:04,509 INFO  [main] o.s.b.f.x.XmlBeanDefinitionReader:316 Loading XML bean definitions from class path resource [spring/datasource-context.xml]
+2017-10-08 18:49:04,908 INFO  [main] o.s.b.f.c.PropertyPlaceholderConfigurer:172 Loading properties file from class path resource [jdbc.properties]
+2017-10-08 18:49:04,916 INFO  [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor:141 JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-10-08 18:49:05,040 INFO  [main] o.s.b.f.s.DefaultListableBeanFactory:603 Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3e33b52e: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,captchaController,policyAdminController,org.springframework.web.servlet.handler.MappedInterceptor#1,org.springframework.web.servlet.view.InternalResourceViewResolver#0,rest,org.springframework.web.servlet.handler.SimpleMappingExceptionResolver#0,conversionService,policyServiceImpl,userServiceImpl,dataSource,sessionFactory,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionManager,pricePolicyDaoImpl,quotaPolicyDaoImpl,whitelistPolicyDaoImpl,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2017-10-08 18:49:05,192 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/captcha/verify],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.CaptchaController.verify(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-10-08 18:49:05,192 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/captcha/show],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.sunshine.admin.controller.CaptchaController.showCaptcha(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-08 18:49:05,198 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/price/saveOrUpdate],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.saveOrUpdatePrice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.sunshine.common.vo.PricePolicy)
+2017-10-08 18:49:05,199 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/whitelist/saveOrUpdate],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.saveOrUpdateWhitelist(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.sunshine.common.vo.WhitelistPolicy)
+2017-10-08 18:49:05,206 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/quota/saveOrUpdate],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.saveOrUpdateQuota(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.sunshine.common.vo.QuotaPolicy)
+2017-10-08 18:49:05,207 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/price/query],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.queryPrice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.sunshine.common.vo.TripType,com.sunshine.common.vo.GDS,com.sunshine.common.vo.Platform,java.lang.String,java.lang.Long,java.lang.String,java.lang.String)
+2017-10-08 18:49:05,207 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/price/del],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.delPrice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,long)
+2017-10-08 18:49:05,208 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/whitelist/query],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.queryWhitelist(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.sunshine.common.vo.GDS,java.lang.String,java.lang.Long,java.lang.String,java.lang.String)
+2017-10-08 18:49:05,209 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/whitelist/del],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.delWhitelist(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,long)
+2017-10-08 18:49:05,210 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/quota/query],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.queryQuota(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.Integer,com.sunshine.common.vo.GDS,java.lang.Long,java.lang.String)
+2017-10-08 18:49:05,212 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/quota/del],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.delQuota(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,long)
+2017-10-08 18:49:05,850 INFO  [main] c.m.v.l.MLog:92 MLog clients using log4j logging.
+2017-10-08 18:49:05,955 INFO  [main] c.m.v.c.C3P0Registry:216 Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+2017-10-08 18:49:06,167 INFO  [main] o.h.a.c.Version:37 Hibernate Commons Annotations 3.2.0.Final
+2017-10-08 18:49:06,173 INFO  [main] o.h.c.Environment:603 Hibernate 3.6.10.Final
+2017-10-08 18:49:06,177 INFO  [main] o.h.c.Environment:636 hibernate.properties not found
+2017-10-08 18:49:06,182 INFO  [main] o.h.c.Environment:814 Bytecode provider name : javassist
+2017-10-08 18:49:06,188 INFO  [main] o.h.c.Environment:695 using JDK 1.4 java.sql.Timestamp handling
+2017-10-08 18:49:06,318 INFO  [main] o.h.c.AnnotationBinder:532 Binding entity from annotated class: com.sunshine.dal.entity.QuotaPolicyEntity
+2017-10-08 18:49:06,363 INFO  [main] o.h.c.a.EntityBinder:530 Bind entity com.sunshine.dal.entity.QuotaPolicyEntity on table tb_quota_policy
+2017-10-08 18:49:06,418 INFO  [main] o.h.c.AnnotationBinder:532 Binding entity from annotated class: com.sunshine.dal.entity.PricePolicyEntity
+2017-10-08 18:49:06,422 INFO  [main] o.h.c.a.EntityBinder:530 Bind entity com.sunshine.dal.entity.PricePolicyEntity on table tb_price_policy
+2017-10-08 18:49:06,466 INFO  [main] o.h.c.Configuration:1676 Hibernate Validator not found: ignoring
+2017-10-08 18:49:06,468 INFO  [main] o.s.o.h.a.AnnotationSessionFactoryBean:780 Building new Hibernate SessionFactory
+2017-10-08 18:49:06,479 INFO  [main] o.h.c.s.HibernateSearchEventListenerRegister:75 Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-10-08 18:49:06,484 INFO  [main] o.h.c.ConnectionProviderFactory:173 Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-10-08 18:49:06,525 INFO  [main] c.m.v.c.i.AbstractPoolBackedDataSource:522 Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 200, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0yu9q1xt6sthqnczk2|5a2ae1ab, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0yu9q1xt6sthqnczk2|5a2ae1ab, idleConnectionTestPeriod -> 600, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sunshine?useUnicode=true&characterEncoding=utf-8&autoReconnect=true, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1200, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 64, maxStatements -> 128, maxStatementsPerConnection -> 0, minPoolSize -> 8, numHelperThreads -> 3, preferredTestQuery -> select 1, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2017-10-08 18:49:06,847 WARN  [main] o.h.u.JDBCExceptionReporter:233 SQL Error: 0, SQLState: null
+2017-10-08 18:49:06,848 ERROR [main] o.h.u.JDBCExceptionReporter:234 An attempt by a client to checkout a Connection has timed out.
+2017-10-08 18:49:06,876 WARN  [main] o.h.c.SettingsFactory:147 Could not obtain connection to query metadata
+java.sql.SQLException: An attempt by a client to checkout a Connection has timed out.
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:118)
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:77)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:687)
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getConnection(AbstractPoolBackedDataSource.java:140)
+	at org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider.getConnection(LocalDataSourceConnectionProvider.java:83)
+	at org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:113)
+	at org.hibernate.cfg.Configuration.buildSettingsInternal(Configuration.java:2863)
+	at org.hibernate.cfg.Configuration.buildSettings(Configuration.java:2859)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1870)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:863)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:782)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:188)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1511)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:575)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:503)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:503)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:636)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:934)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:410)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:548)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:517)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:467)
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStart(Jetty6PluginWebAppContext.java:115)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:156)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.plugin.Jetty6PluginServer.start(Jetty6PluginServer.java:132)
+	at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:441)
+	at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:383)
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo.execute(AbstractJettyRunMojo.java:210)
+	at org.mortbay.jetty.plugin.Jetty6RunMojo.execute(Jetty6RunMojo.java:184)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:106)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:318)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:153)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:555)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:214)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:414)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:357)
+Caused by: com.mchange.v2.resourcepool.TimeoutException: A client timed out while waiting to acquire a resource from com.mchange.v2.resourcepool.BasicResourcePool@60dcf9ec -- timeout at awaitAvailable()
+	at com.mchange.v2.resourcepool.BasicResourcePool.awaitAvailable(BasicResourcePool.java:1416)
+	at com.mchange.v2.resourcepool.BasicResourcePool.prelimCheckoutResource(BasicResourcePool.java:606)
+	at com.mchange.v2.resourcepool.BasicResourcePool.checkoutResource(BasicResourcePool.java:526)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutAndMarkConnectionInUse(C3P0PooledConnectionPool.java:755)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:682)
+	... 103 common frames omitted
+2017-10-08 18:49:06,903 INFO  [main] o.h.d.Dialect:136 Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-08 18:49:06,917 INFO  [main] o.h.e.j.JdbcSupportLoader:70 Disabling contextual LOB creation as connection was null
+2017-10-08 18:49:06,918 INFO  [main] o.h.t.TransactionFactoryFactory:65 Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-10-08 18:49:06,921 INFO  [main] o.h.t.TransactionManagerLookupFactory:83 No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-10-08 18:49:06,921 INFO  [main] o.h.c.SettingsFactory:179 Automatic flush during beforeCompletion(): disabled
+2017-10-08 18:49:06,922 INFO  [main] o.h.c.SettingsFactory:183 Automatic session close at end of transaction: disabled
+2017-10-08 18:49:06,923 INFO  [main] o.h.c.SettingsFactory:198 Scrollable result sets: disabled
+2017-10-08 18:49:06,924 INFO  [main] o.h.c.SettingsFactory:206 JDBC3 getGeneratedKeys(): disabled
+2017-10-08 18:49:06,924 INFO  [main] o.h.c.SettingsFactory:214 Connection release mode: auto
+2017-10-08 18:49:06,924 INFO  [main] o.h.c.SettingsFactory:238 Maximum outer join fetch depth: 2
+2017-10-08 18:49:06,925 INFO  [main] o.h.c.SettingsFactory:241 Default batch fetch size: 1
+2017-10-08 18:49:06,925 INFO  [main] o.h.c.SettingsFactory:245 Generate SQL with comments: disabled
+2017-10-08 18:49:06,925 INFO  [main] o.h.c.SettingsFactory:249 Order SQL updates by primary key: disabled
+2017-10-08 18:49:06,925 INFO  [main] o.h.c.SettingsFactory:253 Order SQL inserts for batching: disabled
+2017-10-08 18:49:06,926 INFO  [main] o.h.c.SettingsFactory:431 Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-10-08 18:49:06,927 INFO  [main] o.h.h.a.ASTQueryTranslatorFactory:47 Using ASTQueryTranslatorFactory
+2017-10-08 18:49:06,928 INFO  [main] o.h.c.SettingsFactory:261 Query language substitutions: {}
+2017-10-08 18:49:06,928 INFO  [main] o.h.c.SettingsFactory:266 JPA-QL strict compliance: disabled
+2017-10-08 18:49:06,928 INFO  [main] o.h.c.SettingsFactory:271 Second-level cache: enabled
+2017-10-08 18:49:06,928 INFO  [main] o.h.c.SettingsFactory:275 Query cache: disabled
+2017-10-08 18:49:06,928 INFO  [main] o.h.c.SettingsFactory:406 Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-10-08 18:49:06,929 INFO  [main] o.h.c.SettingsFactory:285 Optimize cache for minimal puts: disabled
+2017-10-08 18:49:06,929 INFO  [main] o.h.c.SettingsFactory:294 Structured second-level cache entries: disabled
+2017-10-08 18:49:06,931 INFO  [main] o.h.c.SettingsFactory:314 Echoing all SQL to stdout
+2017-10-08 18:49:06,932 INFO  [main] o.h.c.SettingsFactory:323 Statistics: disabled
+2017-10-08 18:49:06,932 INFO  [main] o.h.c.SettingsFactory:327 Deleted entity synthetic identifier rollback: disabled
+2017-10-08 18:49:06,933 INFO  [main] o.h.c.SettingsFactory:343 Default entity-mode: pojo
+2017-10-08 18:49:06,933 INFO  [main] o.h.c.SettingsFactory:347 Named query checking : enabled
+2017-10-08 18:49:06,933 INFO  [main] o.h.c.SettingsFactory:351 Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-10-08 18:49:06,948 INFO  [main] o.h.i.SessionFactoryImpl:202 building session factory
+2017-10-08 18:49:06,979 INFO  [main] o.h.t.BasicTypeRegistry:150 Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@150fc7a7
+2017-10-08 18:49:06,980 INFO  [main] o.h.t.BasicTypeRegistry:150 Type registration [blob] overrides previous : org.hibernate.type.BlobType@489110c2
+2017-10-08 18:49:06,981 INFO  [main] o.h.t.BasicTypeRegistry:150 Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@489110c2
+2017-10-08 18:49:06,981 INFO  [main] o.h.t.BasicTypeRegistry:150 Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@2616b618
+2017-10-08 18:49:06,982 INFO  [main] o.h.t.BasicTypeRegistry:150 Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@4b93dd6a
+2017-10-08 18:49:06,983 INFO  [main] o.h.t.BasicTypeRegistry:150 Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@1c1fa494
+2017-10-08 18:49:06,984 INFO  [main] o.h.t.BasicTypeRegistry:150 Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@3404e5c4
+2017-10-08 18:49:06,984 INFO  [main] o.h.t.BasicTypeRegistry:150 Type registration [clob] overrides previous : org.hibernate.type.ClobType@5bec3e0
+2017-10-08 18:49:06,985 INFO  [main] o.h.t.BasicTypeRegistry:150 Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@5bec3e0
+2017-10-08 18:49:07,117 INFO  [main] o.h.i.SessionFactoryObjectFactory:105 Not binding factory to JNDI, no JNDI name configured
+2017-10-08 18:49:07,122 INFO  [main] o.h.t.h.SchemaUpdate:155 Running hbm2ddl schema update
+2017-10-08 18:49:07,122 INFO  [main] o.h.t.h.SchemaUpdate:167 fetching database metadata
+2017-10-08 18:49:07,130 INFO  [main] o.h.t.h.SchemaUpdate:179 updating schema
+2017-10-08 18:49:07,210 INFO  [main] o.h.t.h.TableMetadata:65 table found: sunshine.tb_price_policy
+2017-10-08 18:49:07,211 INFO  [main] o.h.t.h.TableMetadata:66 columns: [carrier, trip_type, agent_id, rate, from_city, gds, spaces, to_city, id, expense, platform, status]
+2017-10-08 18:49:07,211 INFO  [main] o.h.t.h.TableMetadata:68 foreign keys: []
+2017-10-08 18:49:07,211 INFO  [main] o.h.t.h.TableMetadata:69 indexes: [index_agent_id, index_agent_id_status, primary]
+2017-10-08 18:49:07,247 INFO  [main] o.h.t.h.TableMetadata:65 table found: sunshine.tb_quota_policy
+2017-10-08 18:49:07,247 INFO  [main] o.h.t.h.TableMetadata:66 columns: [agent_id, surplus, gds, target_branch, id, uplimit, pcc_status, status]
+2017-10-08 18:49:07,247 INFO  [main] o.h.t.h.TableMetadata:68 foreign keys: []
+2017-10-08 18:49:07,247 INFO  [main] o.h.t.h.TableMetadata:69 indexes: [index_agent_id, index_agent_id_status, primary]
+2017-10-08 18:49:07,248 INFO  [main] o.h.t.h.SchemaUpdate:217 schema update complete
+2017-10-08 18:49:07,428 INFO  [main] o.s.o.h.HibernateTransactionManager:416 Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 200, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0yu9q1xt6sthqnczk2|5a2ae1ab, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0yu9q1xt6sthqnczk2|5a2ae1ab, idleConnectionTestPeriod -> 600, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sunshine?useUnicode=true&characterEncoding=utf-8&autoReconnect=true, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1200, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 64, maxStatements -> 128, maxStatementsPerConnection -> 0, minPoolSize -> 8, numHelperThreads -> 3, preferredTestQuery -> select 1, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+2017-10-08 18:49:07,439 INFO  [main] o.s.w.c.ContextLoader:325 Root WebApplicationContext: initialization completed in 3422 ms
+2017-10-08 18:49:07,523 INFO  [main] o.s.w.s.DispatcherServlet:457 FrameworkServlet 'restapi': initialization started
+2017-10-08 18:49:07,560 INFO  [main] o.s.w.c.s.XmlWebApplicationContext:512 Refreshing WebApplicationContext for namespace 'restapi-servlet': startup date [Sun Oct 08 18:49:07 CST 2017]; parent: Root WebApplicationContext
+2017-10-08 18:49:07,562 INFO  [main] o.s.b.f.x.XmlBeanDefinitionReader:316 Loading XML bean definitions from class path resource [spring/mvc-context.xml]
+2017-10-08 18:49:07,651 INFO  [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor:141 JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-10-08 18:49:07,661 INFO  [main] o.s.b.f.s.DefaultListableBeanFactory:603 Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3bab95ca: defining beans [mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,captchaController,policyAdminController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.web.servlet.handler.MappedInterceptor#1,org.springframework.web.servlet.view.InternalResourceViewResolver#0,rest,org.springframework.web.servlet.handler.SimpleMappingExceptionResolver#0,conversionService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@3e33b52e
+2017-10-08 18:49:07,684 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/captcha/verify],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.CaptchaController.verify(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-10-08 18:49:07,684 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/captcha/show],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.sunshine.admin.controller.CaptchaController.showCaptcha(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-08 18:49:07,685 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/price/saveOrUpdate],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.saveOrUpdatePrice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.sunshine.common.vo.PricePolicy)
+2017-10-08 18:49:07,686 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/whitelist/saveOrUpdate],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.saveOrUpdateWhitelist(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.sunshine.common.vo.WhitelistPolicy)
+2017-10-08 18:49:07,688 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/quota/saveOrUpdate],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.saveOrUpdateQuota(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.sunshine.common.vo.QuotaPolicy)
+2017-10-08 18:49:07,689 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/price/query],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.queryPrice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.sunshine.common.vo.TripType,com.sunshine.common.vo.GDS,com.sunshine.common.vo.Platform,java.lang.String,java.lang.Long,java.lang.String,java.lang.String)
+2017-10-08 18:49:07,690 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/price/del],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.delPrice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,long)
+2017-10-08 18:49:07,690 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/whitelist/query],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.queryWhitelist(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.sunshine.common.vo.GDS,java.lang.String,java.lang.Long,java.lang.String,java.lang.String)
+2017-10-08 18:49:07,692 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/whitelist/del],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.delWhitelist(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,long)
+2017-10-08 18:49:07,692 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/quota/query],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.queryQuota(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.Integer,com.sunshine.common.vo.GDS,java.lang.Long,java.lang.String)
+2017-10-08 18:49:07,693 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping:180 Mapped "{[/quota/del],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.sunshine.common.http.response.CommonResponse com.sunshine.admin.controller.PolicyAdminController.delQuota(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,long)
+2017-10-08 18:49:07,845 INFO  [main] o.s.w.s.DispatcherServlet:476 FrameworkServlet 'restapi': initialization completed in 322 ms

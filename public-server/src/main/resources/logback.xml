@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration debug="true" scan="true" scanPeriod="30 seconds">
+	<property name="log.dir" value="${catalina.base}/logs"/>
+	<property name="encoding" value="UTF-8"/>
+	<property name="normal-pattern"
+			  value="%d{yyyy-MM-dd.HH:mm:ss.SSS} %-5level %logger{0}:%L [%t] [%X{requestId}] %msg%n"/>
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+		<Target>System.out</Target>
+		<encoder>
+			<pattern>%5p %c{1}:%L -------------- %m%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="nicklaus" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<prudent>false</prudent>
+		<Append>true</Append>
+		<File>${log.dir}/public.log</File>
+		<encoder>
+			<pattern>${normal-pattern}</pattern>
+			<charset>${encoding}</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log.dir}/public.%d{yyyy-MM-dd-HH}.log</fileNamePattern>
+			<maxHistory>72</maxHistory>
+		</rollingPolicy>
+	</appender>
+
+	<root level="INFO">
+		<appender-ref ref="stdout" />
+		<appender-ref ref="nicklaus" />
+	</root>
+
+</configuration>

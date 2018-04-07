@@ -1,0 +1,5 @@
+2017-10-08 22:01:34,610 ERROR [main] o.h.u.JDBCExceptionReporter:234 An attempt by a client to checkout a Connection has timed out.
+2017-10-08 22:04:43,998 ERROR [1232204889@qtp-168555122-0] o.h.u.JDBCExceptionReporter:234 Field 'status' doesn't have a default value
+2017-10-08 22:06:23,363 ERROR [main] o.h.u.JDBCExceptionReporter:234 An attempt by a client to checkout a Connection has timed out.
+2017-10-08 22:07:00,854 ERROR [822769753@qtp-307046074-0] o.h.u.JDBCExceptionReporter:234 Field 'status' doesn't have a default value
+2017-10-08 22:10:44,256 ERROR [main] o.h.u.JDBCExceptionReporter:234 An attempt by a client to checkout a Connection has timed out.

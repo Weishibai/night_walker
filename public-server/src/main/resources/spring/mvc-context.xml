@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.2.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
+
+	<mvc:annotation-driven/>
+
+	<!--<mvc:resources mapping="/images/**" location="/images/" />-->
+	<!--<mvc:resources location="/*.html" mapping="/**.html" />-->
+	<!--<mvc:resources location="/css/*" mapping="/css/**" />-->
+	<!--<mvc:resources location="/js/*" mapping="/js/**" />-->
+	<!--<mvc:resources location="/images/*" mapping="/images/**" />-->
+	<!---->
+
+	<context:component-scan base-package="com.sunshine.publicserver.controller"/>
+
+	<mvc:default-servlet-handler/>
+
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WEB-INF/content/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<bean id="rest" class="org.springframework.web.client.RestTemplate">
+		<property name="messageConverters">
+			<list>
+				<bean
+					class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+					<property name="supportedMediaTypes">
+						<list>
+							<bean class="org.springframework.http.MediaType">
+								<constructor-arg value="text" index="0"
+									type="java.lang.String"></constructor-arg>
+								<constructor-arg value="plain" index="1"
+									type="java.lang.String"></constructor-arg>
+							</bean>
+							<bean class="org.springframework.http.MediaType">
+								<constructor-arg value="application" index="0"
+									type="java.lang.String"></constructor-arg>
+								<constructor-arg value="json" index="1"
+									type="java.lang.String"></constructor-arg>
+							</bean>
+						</list>
+					</property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean
+		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<!-- 定义默认的异常处理页面，当该异常类型的注册时使用 -->
+		<property name="defaultErrorView" value="error"></property>
+		<!-- 定义异常处理页面用来获取异常信息的变量名，默认名为exception -->
+		<property name="exceptionAttribute" value="ex"></property>
+		<!-- 定义需要特殊处理的异常，用类名或完全路径名作为key，异常也页名作为值 -->
+		<property name="exceptionMappings">
+			<props>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="conversionService"
+		class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+		<property name="converters">
+			<set>
+			</set>
+		</property>
+	</bean>
+
+</beans>
